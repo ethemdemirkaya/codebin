@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Handle homepage
+RewriteRule ^$ index.php [L]
+
+# Handle clean URLs for paste viewing
+RewriteRule ^([a-zA-Z0-9]+)$ view.php?id=$1 [L]
+
+# Optional: Force HTTPS (uncomment if needed)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
